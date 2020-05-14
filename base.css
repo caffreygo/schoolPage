@@ -1,5 +1,9 @@
+html {
+    font-size: 16px;
+}
+
 body {
-    background-image: url(./images/head_bg.png);
+    background-image: url("./images/head_bg.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-color: #E1F0FA;
@@ -9,7 +13,7 @@ a:hover {
     color: #fe9705;
 }
 
-nav a.nav-item {
+nav .nav-item {
     color: #fff;
 }
 
@@ -82,6 +86,10 @@ nav a.nav-item {
     border-bottom: 1px solid #ddd;
 }
 
+.main-nav a.nav-link {
+    color: #fff;
+}
+
 .main-nav .dropdown-toggle {
     color: #ffffff;
 }
@@ -101,6 +109,10 @@ nav a.nav-item {
 .news-announcement-wrap {
     height: 345px;
     overflow: hidden;
+}
+
+.news-announcement-wrap > .nav{
+    border-bottom: 1px solid #ccc;
 }
 
 .main-content .carousel-wrap,.main-content .text-wrap  {
@@ -228,6 +240,183 @@ nav a.nav-item {
     margin-left: .8rem;
 }
 
+.channel-content {
+    position: relative;
+    overflow-x: hidden;
+    padding: 20px;
+    min-height: 500px;
+    background-color: #fff;
+}
+
+.channel-nav>a.nav-link {
+    padding: 12px 35px;
+    font-size: 18px;
+    background-color: #EEEEEE;
+    position: relative;
+    margin-top: 3px;
+    border-radius: 0;
+    color: #333;
+}
+
+.nav .nav-header {
+    position: relative;
+    padding: 0 0 0 35px;
+    height: 80px;
+    line-height: 70px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #0498d4;
+    border-radius: 0;
+    display: block;
+    cursor: default;
+    text-decoration: none;
+}
+
+.nav .nav-header:after {
+    content: '';
+    position: absolute;
+    bottom: 18px;
+    left: 36px;
+    width: 45px;
+    height: 1px;
+    background-color: #fff;
+}
+
+.channel-text-wrap header {
+    line-height: 45px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: .2rem;
+    position: relative;
+}
+
+.channel-title__text h2{
+    position: relative;
+    top: 1px;
+    margin-bottom: 0;
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 18px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #049af1;
+}
+
+.channel-title__text aside {
+    display: inline-block;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.channel-title__nav .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.channel-title__nav .breadcrumb>img {
+    margin-right: .5rem;
+}
+
+.channel-title__nav .breadcrumb-item a{
+    color: #999;
+    font-size: 12px;
+}
+
+.channel-title__nav .breadcrumb-item a:hover{
+    text-decoration: none;
+}
+
+.channel-title__nav .breadcrumb-item+.breadcrumb-item::before {
+    color: #999;
+    font-size: 14px;
+    content: "\00bb\00a0";
+}
+
+.channel-text__list {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.channel-text__list li {
+    padding-left: 10px;
+    position: relative;
+}
+
+.channel-text__list li>a:hover {
+    background-color: #F3F3F3;
+}
+
+.channel-text__list li>a {
+    color: #212529;
+    text-decoration: none;
+    padding: 8px 90px 8px 5px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.channel-text__list li>span {
+    position: absolute;
+    color: #999;
+    top: 8px;
+    right: 5px;
+    font-size: 16px;
+}
+
+.channel-text__list li:before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #0498d4;
+}
+
+.channel-content footer {
+    margin-top: 1rem;
+}
+
+.detail-content {
+    position: relative;
+    padding: 20px 0;
+    min-height: 500px;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.detail-content .detail-article {
+    margin: 40px auto 100px;
+    max-width: 950px;
+    text-align: center;
+}
+
+.detail-article h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 1.6rem 0;
+    line-height: 1.15;
+}
+
+.detail-article .article-meta {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #999;
+}
+
+.detail-article .article-meta span {
+    margin: 0 15px;
+    color: #777;
+}
+
+.page-item.active .page-link {
+    background-color: #0498d4;
+    border-color: #0498d4;
+}
+
 /* mobile style */
 @media (max-width: 767px) {
     .header-tags ul li {
@@ -240,7 +429,7 @@ nav a.nav-item {
         background: none;
     }
     .main-content {
-        padding: 0 5px 10px;
+        padding: 8px 5px 10px;
     }
     .news-announcement-wrap {
         margin-top: 0.6rem;
@@ -248,5 +437,8 @@ nav a.nav-item {
     .main-content .carousel-item img {
         height: 10rem;
         width: auto;
+    }
+    .channel-content {
+        padding: 0 12px 15px;
     }
 }
